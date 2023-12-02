@@ -29,8 +29,8 @@ jobs:
       
       - name: Install dependencies
         run: pip install -r requirements.txt
-             && pip3 uninstall urllib3 -y --cert root.pem \
-             && pip3 install --no-cache-dir -U urllib3 --cert root.pem
+             && pip uninstall urllib3 -y --cert root.pem \
+             && pip install --no-cache-dir -U urllib3 --cert root.pem
 
       - name: Run Flask
         run: python main.py
