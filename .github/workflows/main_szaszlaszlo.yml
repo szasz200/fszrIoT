@@ -58,7 +58,9 @@ jobs:
 
       - name: Unzip artifact for deployment
         run: unzip release.zip
-
+        
+      - name: Run Flask
+        run: python main.py
       
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
